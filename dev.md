@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: default
+title: dev
 permalink: /dev/
 ---
-
-# posts in 'dev'
 
 {% for post in site.categories.dev %}
 {% include post-info.html %}
