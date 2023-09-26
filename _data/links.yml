@@ -1,0 +1,8 @@
+- URL: "{{ 'cv' | relative_url }}"
+  name: CV
+
+- URL: https://github.com/sailorfe
+  name: GitHub
+
+- URL: https://twitter.com/kdlrose
+  name: Tweets

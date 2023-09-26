@@ -1,0 +1,6 @@
+<ul>
+    <li><a href="mailto:{{ site.email }}">{{ site.email }}</li>
+        {% for link in site.data.links %}
+    <li><a href="{{ link.URL }}">{{ link.name }}</a></li>
+        {% endfor %}
+</ul>

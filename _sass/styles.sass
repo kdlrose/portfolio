@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap')
+
+@mixin devices ($breakpoint)
+    @if $breakpoint == tablet
+        @media only screen and (max-width: 680px)
+            @content
+    @if $breakpoint == mobile
+        @media only screen and (max-width: 481px)
+            @content
+    
+html
+    font-size: 16px
+    line-height: 1.6
+    font-family: monospace
+    color: slateblue
+    background-color: lavenderblush
+
+body
+    padding: 5%
+
+article
+    width: 40%
+
+    @include devices(tablet)
+        width: 80%
+
+    @include devices(mobile)
+        width: 90%
+
+    h1
+        text-transform: uppercase
+
+    p, ul
+        margin: 3em 0
+
+    ul
+        list-style-type: none
+        padding: 0
+
+    h1, h2, h3
+        font-size: 1em
+        margin: 0
+
+header
+    margin-bottom: 5%
+
+footer
+    margin-top: 5%
+
+section
+    width: 100%
+
+    h1, h2, h3, h4, h5, h6
+        font-size: 1em
+
+    h2, h3, h4, h5, h6
+        font-weight: normal
+        margin: 2em 0 1em
+        opacity: .7
+
+    h2::before
+        content: '## '
+
+    h3::before
+        content: '### '
+
+    h4::before
+        content: '#### '
+
+    h5::before
+        content: '##### '
+
+    h6::before
+        content: '###### '
+
+a
+    color: inherit
+
+h1
+    margin: 0
+    font-size: 1em

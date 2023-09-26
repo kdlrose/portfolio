@@ -1,0 +1,19 @@
+<section>
+    <div class="left-heading">
+        <h2>Research Interests</h2>
+    </div>
+    <div class="table-box">
+        <table>
+            <tr>
+                <td class="year"> </td>
+                <td class="info">
+                    <ol>
+                            {% for interest in site.data.interests %}
+                        <li>{{ interest.interest }}</li>
+                            {% endfor %}
+                        </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

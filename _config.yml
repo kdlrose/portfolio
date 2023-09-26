@@ -1,0 +1,14 @@
+title: Kathryn de la Rosa
+url: https://sailorfe.github.io
+baseurl: /kdlr
+description: >-
+  kdlr's CV
+email: krdlrosa@gmail.com
+archive_name: posts
+permalink: /:categories/:title
+
+# Build settings
+markdown: kramdown
+plugins:
+  - github-pages
+  - jekyll-feed

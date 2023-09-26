@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap");
+html {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: monospace;
+  color: slateblue;
+  background-color: lavenderblush;
+}
+
+body {
+  padding: 5%;
+}
+
+article {
+  width: 40%;
+}
+@media only screen and (max-width: 680px) {
+  article {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 481px) {
+  article {
+    width: 90%;
+  }
+}
+article h1 {
+  text-transform: uppercase;
+}
+article p, article ul {
+  margin: 3em 0;
+}
+article ul {
+  list-style-type: none;
+  padding: 0;
+}
+article h1, article h2, article h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+header {
+  margin-bottom: 5%;
+}
+
+footer {
+  margin-top: 5%;
+}
+
+section {
+  width: 100%;
+}
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  font-size: 1em;
+}
+section h2, section h3, section h4, section h5, section h6 {
+  font-weight: normal;
+  margin: 2em 0 1em;
+  opacity: 0.7;
+}
+section h2::before {
+  content: "## ";
+}
+section h3::before {
+  content: "### ";
+}
+section h4::before {
+  content: "#### ";
+}
+section h5::before {
+  content: "##### ";
+}
+section h6::before {
+  content: "###### ";
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=styles.css.map */

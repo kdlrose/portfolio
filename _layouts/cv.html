@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/cv.css' | relative_url }}">
+    <title>
+        {% if page.title %}
+            {{ page.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+</head>
+<body>
+    <header>
+        <div class="left-heading"> </div>
+        <div class="table-box">
+            <table>
+                <tr>
+                    <td class="year"></td>
+                    <td class="info"><h1>{{ site.title }}</h1></td>
+                </tr>
+            </table>
+            
+        </div>
+    </header>
+    
+    <section>
+        <div class="left-heading">
+            <h2>Profile</h2>
+        </div>
+        <div class="table-box">
+            <table>
+                <tr>
+                    <td class="year"> </td>
+                    <td class="info">{{ content }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    {% include education.html %}
+    
+    {% include interests.html %}
+    
+    {% include theater.html %}
+    
+    {% include audio.html %}
+    
+    {% include work.html %}
+    
+    {% include projects.html %}
+</body>

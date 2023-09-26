@@ -1,0 +1,18 @@
+<section>
+    <div class="left-heading">
+        <h2>Education</h2>
+    </div>
+    <div class="table-box">
+        <table>
+            {% for school in site.data.schools %}
+            <tr>
+                <td class="year">{{ school.years }}</td>
+                <td class="info">
+                    <p><strong>{{ school.degree }} {{ school.program }}</strong>, {{ school.institution }}</p>
+                    <p>{{ school.description }}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</section>

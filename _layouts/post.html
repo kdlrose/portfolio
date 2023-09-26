@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<header>
+    <h1>
+    {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+    <a href="/">~</a>
+    {% for crumb in crumbs offset: 1 %}
+        {% if forloop.last %}
+            / {{ page.title }}
+        {% else %}
+            / <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' }}</a>
+        {% endif %}
+    {% endfor %}
+    </h1>
+</header>
+
+<section>  
+  {{ content }}
+</section>
+
+<footer>
+    {{ page.date | date: "%F %T" }}
+</footer>

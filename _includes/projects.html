@@ -1,0 +1,29 @@
+<section>
+    <div class="left-heading">
+        <h2>Personal Projects</h2>
+    </div>
+    <div class="table-box">
+        <table>
+            {% for project in site.data.projects %}
+            <tr>
+                <td class="year">{{ project.year }}</td>
+                <td class="info">
+                    <h3>
+                        {% if project.link %}
+                            <a href="{{ project.link }}">{{ project.title }}</a>
+                        {% else %}
+                            {{ project.title }}
+                        {% endif %}
+                    </h3>
+                    <p>
+                        {% if project.media %}
+                            <em>{{ project.media }}.</em>
+                        {% endif %}
+                        {{ project.description }}
+                    </p>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</section>
