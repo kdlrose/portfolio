@@ -1,18 +1,13 @@
-<section>
-    <div class="left-heading">
-        <h2>Work History</h2>
-    </div>
-    <div class="table-box">
-        <table>
-            {% for job in site.data.jobs %}
+{% for job in site.data.jobs %}
+
+<table>
             <tr>
                 <td class="year">{{ job.year }}</td>
                 <td class="info">
-                    <p><strong>{{ job.place }}</strong>, {{ job.title }}{% if job.city %} — {{ job.city }}{% endif %}</p>
+                    <strong>{{ job.place }}</strong>, {{ job.title }}{% if job.city %} — {{ job.city }}{% endif %}
                     <p>{{ job.description }}</p>
                 </td>
             </tr>
-            {% endfor %}
+
         </table>
-    </div>
-</section>
+        {% endfor %}

@@ -4,23 +4,38 @@ $darkMode: true
     @if($darkMode)
         @media(prefers-color-scheme: dark)
             @content
-
+    
 @mixin devices ($breakpoint)
     @if $breakpoint == tablet
         @media only screen and (max-width: 680px)
             @content
+
     @if $breakpoint == mobile
         @media only screen and (max-width: 481px)
             @content
-    
+
 html
-    font-size: 15px
-    line-height: 1.7
+    font-size: 13px
+    line-height: 1.6
     font-family: monospace
+    background-color: pink
 
     @include darkMode
+        color: pink
         background-color: black
-        color: mistyrose
+
+hr
+    border-top: 1px dashed black
+    border-bottom: 0
+
+    @include darkMode
+        border-top: 1px dashed pink
+
+a
+    color: inherit
+
+a:hover
+    text-decoration: none
 
 body
     padding: 4%
@@ -84,16 +99,39 @@ section
     h6::before
         content: '###### '
 
-a
-    color: inherit
-
 h1
     margin: 0
     font-size: 1em
 
-hr
-    border-top: 1px dashed black
-    border-bottom: 0
+.left-heading
+    display: block
 
-    @include darkMode
-        border-top: 1px dashed hotpink
+.table-box
+    width: 80%
+    float: right
+
+table
+    width: 100%
+    margin: 0
+    padding: 0
+
+td
+    vertical-align: top
+    padding-bottom: 1em
+
+.year
+    width: 15%
+    text-align: center
+    font-family: monospace
+
+.info
+    width: 85%
+    padding: 0
+
+    ol
+        columns: 3
+        -webkit-columns: 3
+        -moz-columns: 3
+        list-style-type: none
+        margin: 0
+        padding: 0

@@ -1,20 +1,15 @@
-<section>
-    <div class="left-heading">
-        <h2>Personal Projects</h2>
-    </div>
-    <div class="table-box">
-        <table>
-            {% for project in site.data.projects %}
+{% for project in site.data.projects %}
+<table>
             <tr>
                 <td class="year">{{ project.year }}</td>
                 <td class="info">
-                    <h3>
+                    <strong>
                         {% if project.link %}
                             <a href="{{ project.link }}">{{ project.title }}</a>
                         {% else %}
                             {{ project.title }}
                         {% endif %}
-                    </h3>
+                    </strong>
                     <p>
                         {% if project.media %}
                             <em>{{ project.media }}.</em>
@@ -23,7 +18,5 @@
                     </p>
                 </td>
             </tr>
-            {% endfor %}
         </table>
-    </div>
-</section>
+{% endfor %}

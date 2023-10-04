@@ -1,13 +1,32 @@
 html {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.6;
   font-family: monospace;
+  background-color: pink;
 }
 @media (prefers-color-scheme: dark) {
   html {
+    color: pink;
     background-color: black;
-    color: mistyrose;
   }
+}
+
+hr {
+  border-top: 1px dashed black;
+  border-bottom: 0;
+}
+@media (prefers-color-scheme: dark) {
+  hr {
+    border-top: 1px dashed pink;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 body {
@@ -81,23 +100,48 @@ section h6::before {
   content: "###### ";
 }
 
-a {
-  color: inherit;
-}
-
 h1 {
   margin: 0;
   font-size: 1em;
 }
 
-hr {
-  border-top: 1px dashed black;
-  border-bottom: 0;
+.left-heading {
+  display: block;
 }
-@media (prefers-color-scheme: dark) {
-  hr {
-    border-top: 1px dashed hotpink;
-  }
+
+.table-box {
+  width: 80%;
+  float: right;
+}
+
+table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+td {
+  vertical-align: top;
+  padding-bottom: 1em;
+}
+
+.year {
+  width: 15%;
+  text-align: center;
+  font-family: monospace;
+}
+
+.info {
+  width: 85%;
+  padding: 0;
+}
+.info ol {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

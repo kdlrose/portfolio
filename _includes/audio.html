@@ -1,17 +1,10 @@
-<section>
-    <div class="left-heading">
-        <h2>Audio Production</h2>
-    </div>
-    <div class="table-box">
-        <table>
-            {% for audio in site.data.audio %}
-            <tr>
-                <td class="year">{{ audio.year }}</td>
-                <td class="info">
-                    {{ audio.role }}, <em>{{ audio.title }}</em>{% if audio.company %} ({{ audio.company }}){% endif %}{% if audio.city %}, {{ audio.city}}{% endif %}{% if audio.note %} — {{ audio.note }}{% endif %}
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
-</section>
+{% for audio in site.data.audio %}
+<table>
+    <tr>
+        <td class="year">{{ audio.year }}</td>
+        <td class="info">
+                        {{ audio.role }}, <em>{{ audio.title }}</em>{% if audio.company %} ({{ audio.company }}){% endif %}{% if audio.city %}, {{ audio.city}}{% endif %}{% if audio.note %} — {{ audio.note }}{% endif %}
+        </td>
+    </tr>
+</table>
+{% endfor %}

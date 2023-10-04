@@ -1,10 +1,5 @@
-<section>
-    <div class="left-heading">
-        <h2>Selected Dramaturgy</h2>
-    </div>
-    <div class="table-box">
-        <table>
-            {% for credit in site.data.credits %}
+{% for credit in site.data.credits %}
+<table>
             <tr>
                 <td class="year">{{ credit.year }}</td>
                 <td class="info">
@@ -14,7 +9,5 @@
                     <em>{{ credit.title }}</em> by {{ credit.author }}, dir. {{ credit.director }}, {{ credit.theater }}
                 </td>
             </tr>
-            {% endfor %}
         </table>
-    </div>
-</section>
+        {% endfor %}
