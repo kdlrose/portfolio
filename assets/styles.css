@@ -126,13 +126,11 @@ td {
 }
 
 .year {
-  width: 15%;
-  text-align: center;
-  font-family: monospace;
+  width: 10%;
 }
 
 .info {
-  width: 85%;
+  width: 90%;
   padding: 0;
 }
 .info ol {
